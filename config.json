@@ -1,0 +1,25 @@
+{
+  "prefix": "mc!",
+  "id": "703845413593284648",
+  "ownerID": "703845413593284648",
+  "wait": "15",
+      "rainbowdelay": 50000,
+    "rainbowcommand": "rainbow",
+    "rainbowstop": "stop",
+    "rainbowrole": [
+        "#9400D3",
+        "#4B0082",
+        "#0000FF",
+        "#00FF00",
+        "#FFFF00",
+        "#FF7F00",
+        "#FF0000"
+    ],
+    "messageresponse": {
+        "missingperm": "I need permission 'MANAGE_ROLES' to execute this action.",
+        "success": "RainBow Fa-al Shd :D",
+        "rainbowstop": "Ok ranbow is over",
+        "rolenotfound": "The requested role you typed was not found"
+    }
+  
+}
