@@ -86,7 +86,7 @@ class DMallCommand extends commando.Command {
                 console.log(`Waited ${timeout}ms.\t|${i + 1}|\tDMing ${member.user.username}`);
             }
             try {
-                member.send(messagedmall);
+                member.send(`${msg}`);
                 successcount++;
             } catch (error) {
                 console.log(`Failed to send DM! ` + error)
