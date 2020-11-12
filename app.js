@@ -31,14 +31,14 @@ bot.on("ready", () => {
     console.log('______');
 
     setInterval(function status(){
-        let myGuild = bot.guilds.get('705047940565303408');
+        let myGuild = bot.guilds.get('727922401257586719');
         let memberCount = myGuild.memberCount;
         console.log(`${memberCount}`)
-        let statuses = ["GREENWICH",`Now ${memberCount} Members with Us 🤩❤️`,"Join Us","discord.gg/h7f5TYb"];
+        let statuses = ["M A J E S T I C",`Now ${memberCount} Members with Us 🤩❤️`,"Join Us","discord.gg/UqkuN2Dq"];
         let status = Math.floor(Math.random() * statuses.length)
         bot.user.setActivity(statuses[status], {type: 'PLAYING'});
     },60000)
-    cron.schedule('*/1 * * * *', () => {
+    cron.schedule('*/15 * * * *', () => {
         var currentdate = new Date(); 
         var datetime = currentdate.getDate() + "/"
         + (currentdate.getMonth()+1)  + "/" 
@@ -51,9 +51,9 @@ bot.on("ready", () => {
         var jm = pc.jm +1;
         var jy = pc.jy;
 
-        let myGuild = bot.guilds.get('705047940565303408');
-        let datechannel = myGuild.channels.get('752168690577047552');
-        let datepchannel = myGuild.channels.get('752172247913070613');
+        let myGuild = bot.guilds.get('727922401257586719');
+        let datechannel = myGuild.channels.get('776578078443962427');
+        let datepchannel = myGuild.channels.get('776578117765824533');
         datepchannel.setName('📅 Date: '+ jy + '/' + jm + '/'+jd )
         datechannel.setName('📅 Date: '+ datetime )
         console.log('📅 Date: '+ jy + '/' + jm + '/'+jd +'📅 Date: '+ datetime );
