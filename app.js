@@ -47,7 +47,7 @@ bot.on("ready", () => {
         var m = currentdate.getMonth();
         var y = currentdate.getFullYear();
         var pc = jalaali.toJalaali(y,m,d);
-        var jd = pc.jd;
+        var jd = pc.jd +1;
         var jm = pc.jm +1;
         var jy = pc.jy;
 
