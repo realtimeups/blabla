@@ -55,7 +55,7 @@ bot.on("ready", () => {
         let datechannel = myGuild.channels.get('778340053771616336');
         let datepchannel = myGuild.channels.get('776578117765824533');
         datepchannel.setName('📅┌〣 Date: '+ jy + ' • ' + jm + ' • '+jd )
-        datechannel.setName('📅 └〣 Date: '+  d +'•' + m + '•' + y )
+        datechannel.setName('📅└〣 Date: '+  d +' • ' + m + ' • ' + y )
         console.log('📅 Date: '+ jy + '/' + jm + '/'+jd +'📅 Date: '+ datetime );
 
       });
