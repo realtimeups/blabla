@@ -2,8 +2,8 @@
   "prefix": "mc!",
   "id": "703845413593284648",
   "ownerID": "703845413593284648",
-  "wait": "15",
-      "rainbowdelay": 50000,
+  "wait": "24",
+    "rainbowdelay": 150000,
     "rainbowcommand": "rainbow",
     "rainbowstop": "stop",
     "rainbowrole": [
