@@ -2,7 +2,7 @@
   "prefix": "d!",
   "id": "703845413593284648",
   "ownerID": "703845413593284648",
-  "wait": "40",
+  "wait": "60",
     "rainbowdelay": 250000,
     "rainbowcommand": "rainbow",
     "rainbowstop": "stop",
