@@ -13,7 +13,7 @@ moment().format('iYYYY/iM/iD');
 var jalaali = require('jalaali-js');
 var cron = require('node-cron');
 const bot = new commando.Client({
-    commandPrefix:'mc!',
+    commandPrefix:'d!',
     owner: config.id
 });
 
