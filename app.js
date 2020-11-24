@@ -34,7 +34,7 @@ bot.on("ready", () => {
         let myGuild = bot.guilds.get('750850016779829270');
         let memberCount = myGuild.memberCount;
         console.log(`${memberCount}`)
-        let statuses = ["M A J E S T I C",`Now ${memberCount} Members with Us 🤩❤️`,"Join Us","discord.gg/UqkuN2Dq"];
+        let statuses = [`DELUXE : ${memberCount} Members`,"discord.gg/SndcudbAhd"];
         let status = Math.floor(Math.random() * statuses.length)
         bot.user.setActivity(statuses[status], {type: 'PLAYING'});
     },60000)
