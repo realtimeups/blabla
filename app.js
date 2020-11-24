@@ -31,7 +31,7 @@ bot.on("ready", () => {
     console.log('______');
 
     setInterval(function status(){
-        let myGuild = bot.guilds.get('727922401257586719');
+        let myGuild = bot.guilds.get('750850016779829270');
         let memberCount = myGuild.memberCount;
         console.log(`${memberCount}`)
         let statuses = ["M A J E S T I C",`Now ${memberCount} Members with Us 🤩❤️`,"Join Us","discord.gg/UqkuN2Dq"];
@@ -50,12 +50,12 @@ bot.on("ready", () => {
         var jd = pc.jd +1;
         var jm = pc.jm +1;
         var jy = pc.jy;
-
-        let myGuild = bot.guilds.get('727922401257586719');
-        let datechannel = myGuild.channels.get('778340053771616336');
-        let datepchannel = myGuild.channels.get('776578117765824533');
+	var mm = m +1;
+        let myGuild = bot.guilds.get('750850016779829270');
+        let datechannel = myGuild.channels.get('777640862808408064');
+        let datepchannel = myGuild.channels.get('777640771733291018');
         datepchannel.setName('📅┌〣 Date: '+ jy + ' • ' + jm + ' • '+jd )
-        datechannel.setName('📅└〣 Date: '+  d +' • ' + m + ' • ' + y )
+        datechannel.setName('📅└〣 Date: '+  d +' • ' + mm + ' • ' + y )
         console.log('📅 Date: '+ jy + '/' + jm + '/'+jd +'📅 Date: '+ datetime );
 
       });
