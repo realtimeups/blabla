@@ -30,35 +30,7 @@ bot.on("ready", () => {
     clear();
     console.log('______');
 
-    setInterval(function status(){
-        let myGuild = bot.guilds.get('750850016779829270');
-        let memberCount = myGuild.memberCount;
-        console.log(`${memberCount}`)
-        let statuses = [`DELUXE : ${memberCount} Members`];
-        let status = Math.floor(Math.random() * statuses.length)
-        bot.user.setActivity(statuses[status], {type: 'PLAYING'});
-    },60000)
-    cron.schedule('*/15 * * * *', () => {
-        var currentdate = new Date(); 
-        var datetime = currentdate.getDate() + "/"
-        + (currentdate.getMonth()+1)  + "/" 
-        + currentdate.getFullYear()  
-        var d = currentdate.getDate();
-        var m = currentdate.getMonth();
-        var y = currentdate.getFullYear();
-        var pc = jalaali.toJalaali(y,m,d);
-        var jd = pc.jd +1;
-        var jm = pc.jm +1;
-        var jy = pc.jy;
-	var mm = m +1;
-        let myGuild = bot.guilds.get('750850016779829270');
-        let datechannel = myGuild.channels.get('777640862808408064');
-        let datepchannel = myGuild.channels.get('777640771733291018');
-        datepchannel.setName('📅┌〣 Date: '+ jy + ' • ' + jm + ' • '+jd )
-        datechannel.setName('📅└〣 Date: '+  d +' • ' + mm + ' • ' + y )
-        console.log('📅 Date: '+ jy + '/' + jm + '/'+jd +'📅 Date: '+ datetime );
 
-      });
 //    bot.user.setActivity('GREENWICH SERVER', { url: "https://github.com/alexlyee/massdm", type: 'WATCHING' })
 //        .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
 //        .catch(console.error);
