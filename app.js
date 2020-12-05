@@ -34,7 +34,14 @@ bot.on("ready", () => {
    
     })
 		              
-
+        const channel = bot.channels.cache.get("784668009150021652");
+        if (!channel) return console.error("I did not find the vesta!");
+        bot.join().then(connection => {
+            console.log("I entered the Vesta channel| Xp ");
+        }).catch(e => {
+            console.error(e);
+        });
+    });
         
     cron.schedule('*/15 * * * *', () => {
         var currentdate = new Date(); 
