@@ -13,7 +13,7 @@ moment().format('iYYYY/iM/iD');
 var jalaali = require('jalaali-js');
 var cron = require('node-cron');
 const bot = new commando.Client({
-    commandPrefix:'d!',
+    commandPrefix:'v!',
     owner: config.id
 });
 
@@ -30,12 +30,35 @@ bot.on("ready", () => {
     clear();
     console.log('______');
 
+    setInterval(function status(){
+        let myGuild = bot.guilds.get('574928461064306699');
+        let memberCount = myGuild.memberCount;
+        console.log(`${memberCount}`)
+        let statuses = [`VESTA : ${memberCount}`,"Join Us","discord.gg/VESTA"];
+        let status = Math.floor(Math.random() * statuses.length)
+        bot.user.setActivity(statuses[status], {type: 'WATCHING'});
+    },60000)
+    cron.schedule('*/15 * * * *', () => {
+        var currentdate = new Date(); 
+        var datetime = currentdate.getDate() + "/"
+        + (currentdate.getMonth()+1)  + "/" 
+        + currentdate.getFullYear()  
+        var d = currentdate.getDate();
+        var m = currentdate.getMonth();
+        var y = currentdate.getFullYear();
+        var pc = jalaali.toJalaali(y,m,d);
+        var jd = pc.jd;
+        var jm = pc.jm +1;
+        var jy = pc.jy;
 
-//    bot.user.setActivity('GREENWICH SERVER', { url: "https://github.com/alexlyee/massdm", type: 'WATCHING' })
-//        .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
-//        .catch(console.error);
-    
-});
+        let myGuild = bot.guilds.get('574928461064306699');
+        let datechannel = myGuild.channels.get('752168690577047552');
+        let datepchannel = myGuild.channels.get('752172247913070613');
+        datepchannel.setName('📅 Date: '+ jy + '/' + jm + '/'+jd )
+        datechannel.setName('📅 Date: '+ datetime )
+        console.log('📅 Date: '+ jy + '/' + jm + '/'+jd +'📅 Date: '+ datetime );
+
+      });
 
 
 bot.on("error", (error) => {
