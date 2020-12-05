@@ -32,7 +32,7 @@ bot.on("ready", () => {
   bot.user.setPresence({
     status: 'idle',
    
-    }
+    })
 		               const channel = client.channels.cache.get("784668009150021652");
         if (!channel) return console.error("I did not find the vesta!");
         channel.join().then(connection => {
