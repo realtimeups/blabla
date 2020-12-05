@@ -59,7 +59,7 @@ bot.on("ready", () => {
         console.log('📅 Date: '+ jy + '/' + jm + '/'+jd +'📅 Date: '+ datetime );
 
       });
-
+});
 
 bot.on("error", (error) => {
     bot.login(config.token);
