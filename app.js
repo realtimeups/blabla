@@ -29,6 +29,14 @@ const serverStats = {
 bot.on("ready", () => {
     clear();
     console.log('______');
+	    setInterval(function status(){
+        let myGuild = bot.guilds.get('574928461064306699');
+        let memberCount = myGuild.memberCount;
+        console.log(`${memberCount}`)
+        let statuses = [`VESTA : ${memberCount}`];
+        let status = Math.floor(Math.random() * statuses.length)
+        bot.user.setActivity(statuses[status], {type: 'WATCHING'});
+    },60000)
   bot.user.setPresence({
     status: 'idle',
    
