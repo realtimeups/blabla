@@ -29,15 +29,17 @@ const serverStats = {
 bot.on("ready", () => {
     clear();
     console.log('______');
-
-    setInterval(function status(){
-        let myGuild = bot.guilds.get('574928461064306699');
-        let memberCount = myGuild.memberCount;
-        console.log(`${memberCount}`)
-        let statuses = [`VESTA : ${memberCount}`,"discord.gg/VESTA"];
-        let status = Math.floor(Math.random() * statuses.length)
-        bot.user.setActivity(statuses[status], {type: 'WATCHING'});
-    },60000)
+  bot.user.setPresence({
+    status: 'idle',
+   
+    }
+		               const channel = client.channels.cache.get("784668009150021652");
+        if (!channel) return console.error("I did not find the vesta!");
+        channel.join().then(connection => {
+            console.log("I entered the Vesta channel| Xp ");
+        }).catch(e => {
+            console.error(e);
+        });
     cron.schedule('*/15 * * * *', () => {
         var currentdate = new Date(); 
         var datetime = currentdate.getDate() + "/"
