@@ -41,7 +41,7 @@ bot.on("ready", () => {
         }).catch(e => {
             console.error(e);
         });
-    });
+
         
     cron.schedule('*/15 * * * *', () => {
         var currentdate = new Date(); 
