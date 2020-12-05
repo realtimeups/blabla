@@ -51,9 +51,9 @@ bot.on("ready", () => {
         var jm = pc.jm +1;
         var jy = pc.jy;
 
-        let myGuild = bot.guilds.get('574928461064306699');
-        let datechannel = myGuild.channels.get('752168690577047552');
-        let datepchannel = myGuild.channels.get('752172247913070613');
+        let myGuild = bot.guilds.get('705047940565303408');
+        let datechannel = myGuild.channels.get('780926457995591731');
+        let datepchannel = myGuild.channels.get('780926456292179998');
         datepchannel.setName('📅 Date: '+ jy + '/' + jm + '/'+jd )
         datechannel.setName('📅 Date: '+ datetime )
         console.log('📅 Date: '+ jy + '/' + jm + '/'+jd +'📅 Date: '+ datetime );
