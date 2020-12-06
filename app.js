@@ -13,7 +13,7 @@ moment().format('iYYYY/iM/iD');
 var jalaali = require('jalaali-js');
 var cron = require('node-cron');
 const bot = new commando.Client({
-    commandPrefix:'v!',
+    commandPrefix:'dd!',
     owner: config.id
 });
 
@@ -30,7 +30,7 @@ bot.on("ready", () => {
     clear();
     console.log('______');
 	    setInterval(function status(){
-        let myGuild = bot.guilds.get('574928461064306699');
+        let myGuild = bot.guilds.get('750850016779829270');
         let memberCount = myGuild.memberCount;
         console.log(`${memberCount}`)
         let statuses = [`VESTA : ${memberCount}`];
@@ -55,12 +55,6 @@ bot.on("ready", () => {
         var jm = pc.jm +1;
         var jy = pc.jy;
 
-        let myGuild = bot.guilds.get('705047940565303408');
-        let datechannel = myGuild.channels.get('780926457995591731');
-        let datepchannel = myGuild.channels.get('780926456292179998');
-        datepchannel.setName('📅 Date: '+ jy + '/' + jm + '/'+jd )
-        datechannel.setName('📅 Date: '+ datetime )
-        console.log('📅 Date: '+ jy + '/' + jm + '/'+jd +'📅 Date: '+ datetime );
 
       });
 });
